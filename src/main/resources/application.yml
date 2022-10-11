@@ -1,0 +1,27 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+travel:
+  security:
+    #APP-USER config
+    appUserName: someuser
+    appUserPasswords: $2a$10$FXcjdfFDBQfqArK7.EEz5Obo0Nh1wlYx4V6IJGED2pcV2GyUHXD.q
+    appUserRole: APP-USER
+    appUserEndPoint: /travel/**
+
+    #OPS-USER config
+    adminUserName: ops
+    adminPasswords: $2a$10$FXcjdfFDBQfqArK7.EEz5Obo0Nh1wlYx4V6IJGED2pcV2GyUHXD.q
+    adminRole: OPS-USER
+    adminEndPoint: /actuator/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    metrics:
+      enabled: true

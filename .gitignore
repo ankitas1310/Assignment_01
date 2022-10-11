@@ -19,12 +19,18 @@ dist/
 # Package files
 *.jar
 
+#gradle
+.gradle/
+build/
+out/
+
 # Maven
 target/
 dist/
 
 # JetBrains IDE
 .idea/
+
 
 # Unit test reports
 TEST*.xml
